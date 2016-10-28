@@ -1,13 +1,13 @@
 # Getting-and-Cleaning-Data-Course-Project
 
-##CodeBook
+## CodeBook
 
 ##### Created by Ronald Hensbergen  
 As part of the course Getting and Cleaning Data which is again part of the Data Science Specialization
 
 This file explains all the columns of the resulting tables from this final project and how they are created.  
 
-###Table combineddata
+### Table combineddata
 *  subjectid: a numerical value taken from the subject_test and subject_train files. Since the data is anonimized, no further information is available from the subjects.
 *  set: character value 'test' means its originated from the test set (test/X_test.txt), train means its from the train set (train/X_train.txt)
 *  statisticalfunction: character value this comes from the features.txt file, where it is separated from as mean and std.
@@ -19,3 +19,6 @@ This file explains all the columns of the resulting tables from this final proje
 *  magnitude: logical value. This comes from the features.txt file, to describe if the original feature was derived as the magnitude using the Euclidean norm.
 * gyroscope: logical value. This comes from the features.txt file, to describe if the original feature was derived using a gyroscope.
 * value: originated from the test and train sets. This is the actual measured value.
+
+### Table groupeddata
+This table has exactly the same columns as above, except type is missing and value is the mean of the above value.
