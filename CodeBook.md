@@ -3,11 +3,9 @@
 ##CodeBook
 
 ##### Created by Ronald Hensbergen  
-As part of the course Getting and Cleaning Data  
-which is again part of the Data Science Specialization
+As part of the course Getting and Cleaning Data which is again part of the Data Science Specialization
 
-This file explains all the columns of the resulting tables  
-from this final project and how they are created.  
+This file explains all the columns of the resulting tables from this final project and how they are created.  
 
 ###Table combineddata
 *  subjectid: a numerical value taken from the subject_test and subject_train files. Since the data is anonimized, no further information is available from the subjects.
