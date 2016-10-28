@@ -13,10 +13,10 @@ The code file is the `run_analysis.R` file and contains the following parts:
 4. Read the features file that needs to be linked to the col.names later  
 5. Read the test and train files (X-files) with fread, as normal read.table crashes with memory issues  
 6. Combine all the data (test and train) and previously loaded files into 1 file  
-7. Tidy up the data by selecting only mean and std
-8. Gather features into rows
-9. Separate features into different parts
-10. Merge different parts together
+7. Tidy up the data by selecting only mean and std  
+8. Gather features into rows  
+9. Separate features into different parts  
+10. Merge different parts together  
 
 I decided not to create a dimension table for the features, as I couldn't figure out of these really belong to each other.
 
