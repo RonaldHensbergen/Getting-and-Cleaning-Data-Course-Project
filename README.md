@@ -19,3 +19,5 @@ The code file is the `run_analysis.R` file and contains the following parts:
 10. Merge different parts together
 
 I decided not to create a dimension table for the features, as I couldn't figure out of these really belong to each other.
+
+No other action is required than to open the `run_analysis.R` file, select all of it and click Run.
