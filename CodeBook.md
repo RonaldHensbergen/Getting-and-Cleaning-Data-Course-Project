@@ -14,7 +14,7 @@ This file explains all the columns of the resulting tables from this final proje
 *  direction: character value this comes from the features.txt file, where it is separated from as X, Y and Z.
 *  activity: numerical value the names come directly from the activity_labels.txt file, where the combineddata was merged with via its id.
 *  type: character value this comes from the features.txt file, where it was separated as t and f (first character of the feature), then it was translated as time and feature to make it readable.
-*  accelerationtype: character value this comes from the features.txt file, where it was separated as Body, BodyBody and Gravity. Only Body and Gravity were described in the feature_info.txt file, so BodyBody might be separated at a later notice.
+*  accelerationtype: character value this comes from the features.txt file, where it was separated as Body, BodyBody and Gravity. Only Body and Gravity were described in the feature_info.txt file, so BodyBody might be separated or described differently at a later notice.
 *  jerk: logical value this comes from the features.txt file, to describe if the original feature was derived in time to obtain Jerk signals (to measure the rate of change of acceleration)
 *  magnitude: logical value. This comes from the features.txt file, to describe if the original feature was derived as the magnitude using the Euclidean norm.
 * gyroscope: logical value. This comes from the features.txt file, to describe if the original feature was derived using a gyroscope.
