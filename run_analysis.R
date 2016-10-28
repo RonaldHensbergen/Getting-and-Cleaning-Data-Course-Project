@@ -26,7 +26,7 @@ download.file(urlzipfile,zipfile)
 
 #get labels files to combine them later with 
 #cbind and rbind with the test of the data
-testlabels <- read.table(unzip(zipfile = zipfile, files = testlabel),
+testlabels <- read.table(unzip(zipfile  = zipfile, files = testlabel),
                 col.names="activityid")
 trainlabels <- read.table(unzip(zipfile = zipfile, files = trainlabel),
                 col.names="activityid")
@@ -56,9 +56,6 @@ train <- train %>% mutate(set="train")
 combineddata <- cbind(rbind(testsubjects,trainsubjects), 
                       rbind(testlabels,trainlabels),
                       rbind(test,train))
-
-#get rid of some large objects
-rm(c("train","test","testsubjects","trainsubjects","testlabels","trainlabels"))
 
 #start tidying up the data:
 #get rid of features other than mean and std
@@ -109,5 +106,13 @@ combineddata<-combineddata %>% merge(typetemp,by='typecode') %>%
         merge(activitytemp,by='activityid') %>%
         select(subjectid:direction,activity=activityname,type:gyroscope,value)
 
+groupeddata <- combineddata %>% 
+        group_by(type, accelerationtype,
+                 statisticalfunction, direction, accelerometer, jerk, 
+                 magnitude, gyroscope, activity, subjectid) %>% 
+        summarise(mean(value))
+
+if(!file.exists("./export")){dir.create("./export")}
+write.table (groupeddata,"./export/summary.txt", row.names = FALSE)
 #cleanup
-rm(list=setdiff(ls(), "combineddata"))
+rm(list=setdiff(ls(), c("combineddata", "groupeddata")))
