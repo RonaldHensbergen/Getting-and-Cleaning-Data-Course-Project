@@ -16,7 +16,7 @@ The code file is the `run_analysis.R` file and contains the following parts:
 7. Tidy up the data by selecting only mean and std  
 8. Gather features into rows  
 9. Separate features into different parts  
-10. Merge different parts together  
+10. Merge different parts into combined data
 
 I decided not to create a dimension table for the features, as I couldn't figure out of these really belong to each other.
 
