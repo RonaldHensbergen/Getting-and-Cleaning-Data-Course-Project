@@ -17,6 +17,7 @@ The code file is the `run_analysis.R` file and contains the following parts:
 8. Gather features into rows  
 9. Separate features into different parts  
 10. Merge different parts into combined data
+11. From the above combined data file, a summary is made with all fields excluding type. Of the value column the mean is taken.
 
 I decided not to create a dimension table for the features, as I couldn't figure out of these really belong to each other.
 
